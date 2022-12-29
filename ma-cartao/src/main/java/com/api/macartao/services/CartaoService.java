@@ -3,6 +3,7 @@ package com.api.macartao.services;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -17,11 +18,14 @@ public class CartaoService {
 
 	@Autowired
 	private CartaoRepository repository;
+	
+	@Value("${ma-cartao.saldo}")
+	private Double cartaoSaldo;
 
 	public CartaoDto criar(CartaoDto dto) {
 
 		Cartao entity = new Cartao();
-		dto.setSaldo(500.00);
+		dto.setSaldo(cartaoSaldo);
 		dto.setSenha(dto.getSenha() == null ? geradorDeSenha() : dto.getSenha());
 		dtoToEntity(entity, dto);
 		Cartao cartao = repository.save(entity);
