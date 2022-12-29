@@ -2,13 +2,15 @@ package com.api.macartao.resources;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,8 +23,12 @@ import com.api.macartao.services.CartaoService;
 @RequestMapping("/cartoes")
 public class CartaoResource {
 
+	private Logger log = LoggerFactory.getLogger(CartaoResource.class);
 	@Autowired
 	private CartaoService service;
+
+	@Autowired
+	private Environment env;
 
 	@GetMapping("/{numeroCartao}")
 	public ResponseEntity<Double> consultaSaldo(@Valid @PathVariable Long numeroCartao) {
@@ -48,6 +54,7 @@ public class CartaoResource {
 	@PostMapping("/{numeroCartao}/{senhaCartao}/{vlTransacao}")
 	public StatusTransacao criarTransacao(@PathVariable Long numeroCartao, @PathVariable int senhaCartao,
 			@PathVariable Double vlTransacao) {
+		log.info("Porta " + env.getProperty("local.server.port"));
 		return service.efetivarTransacao(numeroCartao, senhaCartao, vlTransacao);
 
 	}
