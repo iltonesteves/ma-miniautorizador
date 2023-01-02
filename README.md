@@ -61,9 +61,33 @@
 ```
 
 ``` md
-11Âº contrui o README
+12Âº contrui o README
 ```
 
-**PROPOSTA** ter os **_passos de construÃ§Ã£o de um projeto_** com ```commit e push``` no **_Git_**
+**PROPOSTA** ter os **_passos de construção de um projeto_** com ```commit e push``` no **_Git_**
 
+``` md
+13º implementei  e configurei Eureka Server
+```
+``` md
+14º implementei  e configurei Eureka Client
+		ma-cartão
+		ma-transação
+```
+``` md
+15º implementei  porta alietória para:
+		ma-cartão
+		ma-transação
+```
+``` md
+16º implementei  hYStrix para tolerância de falhas
+		retorna uma resposta alternativa
+		no balanceamento de carga, o Ribbon tem o tempo de 1 segundo
+		configurando Hystrix:
+				hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=60000
+				ribbon.ConnectTimeout=10000
+				ribbon.ReadTimeout=20000
+		ma-cartão
+		ma-transação
+```
 
