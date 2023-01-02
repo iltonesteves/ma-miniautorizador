@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.api.matransacao.entities.enums.StatusTransacao;
 
 @Component
-//@FeignClient(name = "ma-cartao", url = "${ma-cartao.host}", path = "/cartoes")
 @FeignClient(name = "ma-cartao", path = "/cartoes")
 public interface CartaoFeignClient {
 
