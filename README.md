@@ -90,4 +90,13 @@
 		ma-cartão
 		ma-transação
 ```
+``` md
+17º implementei  Gateway com Zull e configurei os microserviço:
+		ma-cartão
+		ma-transação
+		ma-eureka-server
+```
+``` md
+18º configurando timeout compativel com ma-transacao
+```
 
