@@ -99,4 +99,19 @@
 ``` md
 18º configurando timeout compativel com ma-transacao
 ```
+``` md
+19º configurando GIT<main> para ser o canal de configuração
+		ma-cartao.properties
+		ma-cartao-test.properties
+```
+``` md
+20º implementando Config-server e configurando bootstrap 
+		ma-cartão
+		ma-transação
+```
+``` md
+21º preparando Actuator para atualizar configurações em tempo real 
+		ma-cartão
+		ma-transação
+```
 

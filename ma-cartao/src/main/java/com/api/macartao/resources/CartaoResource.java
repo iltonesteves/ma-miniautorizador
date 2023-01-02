@@ -5,6 +5,8 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,7 @@ import com.api.macartao.entities.dtos.CartaoDto;
 import com.api.macartao.entities.enums.StatusTransacao;
 import com.api.macartao.services.CartaoService;
 
+@RefreshScope
 @RestController
 @RequestMapping("/cartoes")
 public class CartaoResource {
@@ -26,6 +29,9 @@ public class CartaoResource {
 	private Logger log = LoggerFactory.getLogger(CartaoResource.class);
 	@Autowired
 	private CartaoService service;
+
+	@Value("${test-config}")
+	private String TestConfig;
 
 	@Autowired
 	private Environment env;
@@ -39,6 +45,12 @@ public class CartaoResource {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 
+	}
+
+	@GetMapping(value = "/configs")
+	public ResponseEntity<Void> getConfigs() {
+		log.info("Configuração.......   " + TestConfig);
+		return ResponseEntity.noContent().build();
 	}
 
 	@PostMapping
