@@ -122,4 +122,14 @@
 		user e role, associação de muitos para muitos
 		user Repositorio, resource e Zuul configurados
 ```
+``` md
+24º criação do projeto ma-oauth - AUTORIZADOR
+		O OAuth 2 é um protocolo de autorização que permite que aplicativos obtenham acesso limitado 
+	a 	contas de usuários em um serviço HTTP sem a necessidade de enviar seu usuário e senha. 
+	Basicamente, o 	usuário delega, a um determinado aplicativo, acesso aos seus dados em um 
+	determinado serviço ou API.
+```
+``` md
+25º configuração do projeto ma-oauth
+```
 
