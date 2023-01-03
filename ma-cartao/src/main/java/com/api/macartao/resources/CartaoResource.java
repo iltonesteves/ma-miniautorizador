@@ -30,8 +30,8 @@ public class CartaoResource {
 	@Autowired
 	private CartaoService service;
 
-//	@Value("${test-config}")
-//	private String TestConfig;
+	@Value("${test-config}")
+	private String TestConfig;
 
 	@Autowired
 	private Environment env;
@@ -49,7 +49,7 @@ public class CartaoResource {
 
 	@GetMapping(value = "/configs")
 	public ResponseEntity<Void> getConfigs() {
-//		log.info("Configuração.......   " + TestConfig);
+		log.info("Configuração.......   " + TestConfig);
 		return ResponseEntity.noContent().build();
 	}
 

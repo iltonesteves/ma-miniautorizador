@@ -117,4 +117,9 @@
 ``` md
 22º criação do projeto ma-user
 ```
+``` md
+23º configuração do projeto ma-user e ma-roles
+		user e role, associação de muitos para muitos
+		user Repositorio, resource e Zuul configurados
+```
 
