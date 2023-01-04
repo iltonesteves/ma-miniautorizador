@@ -19,7 +19,7 @@ public class ResouceServerConfig extends ResourceServerConfigurerAdapter {
 	// DEFINIÇÃO DE ROTAS
 	private static final String[] PUBLIC = {"/ma-oauth/oauth/token"};
 	private static final String[] OPERATOR = {"/ma-cartao/**"}; // para o operador qualquer rota está autorizado
-	private static final String[] ADMIN = {"/ma-transacao/**","/ma-user/**"}; // para o admin
+	private static final String[] ADMIN = {"/ma-transacao/**","/ma-user/**","/actuator/refresh","/ma-cartao/actuator/**","/ma-oauth/actuator/**"}; // para o admin
 	
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
