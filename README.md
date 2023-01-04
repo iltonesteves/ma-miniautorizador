@@ -132,4 +132,14 @@
 ``` md
 25º configuração do projeto ma-oauth
 ```
+``` md
+26º implementando FEIGNCLIENT no projeto ma-oauth
+		O Feign é um cliente HTTP inspirado no Retrofit que dá suporte ao JAXRS 2.0. 
+	Ele faz com que seja simples escrever clientes de webservice, pois basta escrever 
+	a interface com o serviço sem se preocupar em escrever aspectos de comunicação.
+```
 
+** JWT **  
+é um padrão para autenticação e troca de informações definido pela RFC7519. 
+Nele é possível armazenar de forma segura e compacta objetos JSON. 
+Este token é um código Base64 e pode ser assinado usando um segredo ou par de chaves privadas/públicas.
