@@ -61,9 +61,85 @@
 ```
 
 ``` md
-11Âº contrui o README
+12Âº contrui o README
 ```
 
-**PROPOSTA** ter os **_passos de construÃ§Ã£o de um projeto_** com ```commit e push``` no **_Git_**
+**PROPOSTA** ter os **_passos de construção de um projeto_** com ```commit e push``` no **_Git_**
 
+``` md
+13º implementei  e configurei Eureka Server
+```
+``` md
+14º implementei  e configurei Eureka Client
+		ma-cartão
+		ma-transação
+```
+``` md
+15º implementei  porta alietória para:
+		ma-cartão
+		ma-transação
+```
+``` md
+16º implementei  hYStrix para tolerância de falhas
+		retorna uma resposta alternativa
+		no balanceamento de carga, o Ribbon tem o tempo de 1 segundo
+		configurando Hystrix:
+				hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=60000
+				ribbon.ConnectTimeout=10000
+				ribbon.ReadTimeout=20000
+		ma-cartão
+		ma-transação
+```
+``` md
+17º implementei  Gateway com Zull e configurei os microserviço:
+		ma-cartão
+		ma-transação
+		ma-eureka-server
+```
+``` md
+18º configurando timeout compativel com ma-transacao
+```
+``` md
+19º configurando GIT<main> para ser o canal de configuração
+		ma-cartao.properties
+		ma-cartao-test.properties
+```
+``` md
+20º implementando Config-server e configurando bootstrap 
+		ma-cartão
+		ma-transação
+```
+``` md
+21º preparando Actuator para atualizar configurações em tempo real 
+		ma-cartão
+		ma-transação
+```
+``` md
+22º criação do projeto ma-user
+```
+``` md
+23º configuração do projeto ma-user e ma-roles
+		user e role, associação de muitos para muitos
+		user Repositorio, resource e Zuul configurados
+```
+``` md
+24º criação do projeto ma-oauth - AUTORIZADOR
+		O OAuth 2 é um protocolo de autorização que permite que aplicativos obtenham acesso limitado 
+	a 	contas de usuários em um serviço HTTP sem a necessidade de enviar seu usuário e senha. 
+	Basicamente, o 	usuário delega, a um determinado aplicativo, acesso aos seus dados em um 
+	determinado serviço ou API.
+```
+``` md
+25º configuração do projeto ma-oauth
+```
+``` md
+26º implementando FEIGNCLIENT no projeto ma-oauth
+		O Feign é um cliente HTTP inspirado no Retrofit que dá suporte ao JAXRS 2.0. 
+	Ele faz com que seja simples escrever clientes de webservice, pois basta escrever 
+	a interface com o serviço sem se preocupar em escrever aspectos de comunicação.
+```
 
+** JWT **  
+é um padrão para autenticação e troca de informações definido pela RFC7519. 
+Nele é possível armazenar de forma segura e compacta objetos JSON. 
+Este token é um código Base64 e pode ser assinado usando um segredo ou par de chaves privadas/públicas.
