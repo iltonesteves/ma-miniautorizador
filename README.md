@@ -68,6 +68,9 @@
 
 ``` md
 13º implementei  e configurei Eureka Server
+		O Eureka é o Service Discovery do Netflix que é usado no Server e no Cliente. 
+		O servidor pode ser configurado e implantado para estar altamente disponível, 
+		com cada servidor replicando o estado sobre os serviços registrados para os outros.
 ```
 ``` md
 14º implementei  e configurei Eureka Client
